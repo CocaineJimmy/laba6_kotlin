@@ -11,6 +11,7 @@ import com.topic2.android.notes.domain.model.NoteModel
 import com.topic2.android.notes.ui.components.Note
 import com.topic2.android.notes.ui.components.TopAppBar
 import com.topic2.android.notes.viewmodel.MainViewModel
+import androidx.compose.runtime.getValue
 
 @Composable
 fun NotesScreen(
