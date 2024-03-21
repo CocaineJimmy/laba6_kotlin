@@ -31,6 +31,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.sp
 import com.topic2.android.notes.domain.model.NoteModel
+import com.topic2.android.notes.util.fromHex
 
 
 @Preview
@@ -57,9 +58,8 @@ fun Note(
                 modifier = Modifier
                     .align(Alignment.CenterVertically)
                     .padding(start = 16.dp, end = 16.dp),
-                color = rwGreen,
+                color = Color.fromHex(note.color.hex),
                 size = 40.dp,
-                padding = 4.dp,
                 border = 1.dp
             )
             Column(modifier = Modifier
