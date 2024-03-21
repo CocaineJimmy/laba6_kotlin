@@ -30,6 +30,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.sp
+import com.topic2.android.notes.domain.model.NoteModel
 
 
 @Preview
@@ -39,7 +40,11 @@ fun NoteColorPreview(){
 }
 
 @Composable
-fun Note(){
+fun Note(
+    note: NoteModel,
+    onNoteClick: (NoteModel) -> Unit = {},
+    onNoteCheckedChange: (NoteModel) -> Unit = {}
+){
     val backgroundShape: Shape = RoundedCornerShape(4.dp)
     Row(modifier = Modifier
         .padding(8.dp)
@@ -89,5 +94,11 @@ fun Note(){
 @Preview
 @Composable
 private fun NotePreview(){
-    Note()
+    Note(
+        note = NoteModel(
+            1,
+            "Заметка 1",
+            "Содержимое 1",
+            null)
+    )
 }
