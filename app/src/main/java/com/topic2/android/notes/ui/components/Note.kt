@@ -80,13 +80,15 @@ fun Note(
                         letterSpacing = 0.25.sp
                     ))
             }
-            Checkbox(
-                checked = false,
-                onCheckedChange = { },
-                modifier = Modifier
-                    .padding(start = 8.dp)
-                    .align(Alignment.CenterVertically)
-            )
+            if (note.isCheckedOff !=null)
+                Checkbox(
+                    checked = note.isCheckedOff,
+                    onCheckedChange = { },
+                    modifier = Modifier
+                        .padding(16.dp)
+                        .align(Alignment.CenterVertically)
+                )
+        }
         }
     }
 }
