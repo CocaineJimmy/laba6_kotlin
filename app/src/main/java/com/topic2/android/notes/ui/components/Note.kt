@@ -65,14 +65,14 @@ fun Note(
             Column(modifier = Modifier
                 .weight(1f)
                 .align(Alignment.CenterVertically)) {
-                Text(text = "Заголовок", maxLines = 1,
+                Text(text = note.title, maxLines = 1,
                     color = Color.Black,
                     style = TextStyle(
                         fontWeight = FontWeight.Normal,
                         fontSize = 16.sp,
                         letterSpacing = 0.15.sp)
                 )
-                Text(text = "Содержание", maxLines = 1,
+                Text(text = note.content, maxLines = 1,
                     color = Color.Black.copy(alpha = 0.75f),
                     style = TextStyle(
                         fontWeight = FontWeight.Normal,
